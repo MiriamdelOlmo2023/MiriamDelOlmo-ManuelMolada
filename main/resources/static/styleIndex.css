@@ -1,0 +1,514 @@
+body {
+    font-family: 'Super Mario 256', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("source/bg.gif");
+    background-size: cover;
+    background-position-y: top;
+    background-attachment: fixed;
+    zoom: 100%;
+}
+
+header {
+    background-color: #b71313;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    border: 3px solid #000000;
+    height: 90px;
+}
+
+.usuario-info {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#nombreUser {
+	font-size: 25px;
+}
+
+#logout {
+	margin-bottom: -14px;
+	height: 40px;
+	width: auto;
+	margin-left: 5px;
+	filter: invert(100%);
+}
+
+#main {
+    margin: auto;
+    margin-top: 35px;
+}
+
+.juegos {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    height: 450px;    
+}
+
+.juego {
+    position: relative;
+    flex: 1;
+    border: 2px solid #1f53c5;
+    border-radius: 8px;
+    margin: 10px;
+    transition: transform 0.3s;
+    overflow: hidden;
+  	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra predeterminada */
+}
+
+.juego h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #08a30b;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.juego:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 60px rgba(255, 255, 255, 0.8) inset; /* Sombra más intensa y resplandor fuerte */
+    transition: box-shadow 0.5s ease-in-out; /* Transición más lenta para un efecto más dramático */
+}
+
+#casino-title,
+#carrera-galgos-title {
+    background-color: #118908;
+    font-family: 'Super Mario 256', sans-serif;
+}
+
+.juego p {
+    color: #1f53c5;
+}
+
+#carrera-galgos {
+	background-image: url('source/galgos.jpg');
+}
+
+#casino {
+	background-image: url('source/ruleta.jpg');
+}
+
+#casino,
+#carrera-galgos {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+#casino:hover,
+#carrera-galgos:hover {
+    transform: scale(1.05);
+}
+
+#casino h2,
+#carrera-galgos h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#casino p,
+#carrera-galgos p {
+    color: #1f53c5;
+}
+
+footer {
+    background-color: #b71313;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: 3px solid #000000;
+}
+
+#changePwd {
+    height: 30px;
+    width: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 25px; /* Ajusta según sea necesario para evitar que se superponga demasiado con el borde de la pantalla */
+    margin-left: 20px; /* Ajusta según sea necesario para evitar que se superponga demasiado con el borde de la pantalla */
+}
+
+#logoYt {
+    height: 30px;
+    width: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 25px; /* Ajusta según sea necesario para evitar que se superponga demasiado con el borde de la pantalla */
+    margin-right: 20px; /* Ajusta según sea necesario para evitar que se superponga demasiado con el borde de la pantalla */
+}
+
+@font-face {
+    font-family: 'Super Mario 256';
+    src: url('SuperMario256.ttf') format('truetype');
+}
+
+.contenedor {
+    display: inline-block;
+    margin-right: 80px;
+}
+
+.imagen {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+
+.contenedorMario {
+    display: inline-block;
+}
+
+.letras {
+    width: 140px;
+    height: auto;
+    border-radius: 30%;
+}
+
+#divBotones {
+	margin-right: 50px;
+}
+
+.insertar-monedas {
+    height: 50px;
+    font-family: 'Super Mario 256', sans-serif;
+    background-color: #118908;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out; /* Agregado para un cambio suave de color al pasar el mouse */
+}
+
+.insertar-monedas:hover {
+    background-color: #0e6d06; /* Cambio de color al pasar el mouse */
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+
+
+/*MODALES*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    padding: 40px;
+    background-color: #ffffffd0;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.botonesModal {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+  
+.botonModal {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #0DA643;
+    color: #0DA643;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.botonModal:hover {
+    background-color: #0DA643;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+  
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+ /* Estilos para tablets y dispositivos más pequeños */
+@media only screen and (max-width: 768px) {
+
+  .imagen {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-left: -10px;
+  }
+  .letras {
+    display: none;
+  }
+
+  .contenedorMario {
+    display: inline-block;
+    margin-left: -80px;
+  }
+    #insertar-monedas {
+      height: 50px;
+      width: 120px;
+      font-family: 'Super Mario 256', sans-serif;
+      background-color: #118908; /* Color verde brillante */
+      color: #fff; /* Texto blanco para contrastar */
+      padding: 10px 20px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+      margin-right: 20px;
+      border-radius: 10px; /* Reducido el valor para un aspecto más moderno */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto moderno */
+    }
+    
+    #insertar-monedas:hover {
+      background-color: #45a049; /* Cambio de color al pasar el ratón para interactividad */
+    }
+
+  .usuario-info {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+
+  .juegos {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 450px;
+    margin-left: -10% !important;
+    margin-top: -12px;
+    
+  }
+  
+  .juego {
+    position: relative;
+    flex: 1;
+    border: 2px solid #1f53c5;
+    border-radius: 8px;
+    margin: 10px;
+    transition: transform 0.3s;
+    overflow: hidden; 
+    
+  }
+
+  .juego h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #a3a008;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1; /* Asegura que el h2 esté sobre el contenido del div */
+  }
+
+  .juego:hover {
+    transform: scale(1.05);
+  }
+  
+  #casino-title {
+    background-color: #118908;
+    font-family: 'Super Mario 256', sans-serif; /* Aplicar la fuente aquí */
+  }
+
+  #carrera-galgos-title {
+    background-color: #118908;
+    font-family: 'Super Mario 256', sans-serif; /* Aplicar la fuente aquí */
+  }
+  
+
+  .juego p {
+    color: #1f53c5;
+  }
+
+  #casino {
+    background-image: url('source/ruleta.jpg'); /* Ruta de la imagen del casino */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ajusta el color del texto según sea necesario */
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    margin: 10px;
+    margin-left: 150px;
+    transition: transform 0.3s;
+  }
+  
+  #casino:hover {
+    transform: scale(1.05);
+  }
+  
+  #casino h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  #casino p {
+    color: #1f53c5;
+  }
+
+  #carrera-galgos {
+    background-image: url('source/galgos.jpg'); /* Ruta de la imagen del casino */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ajusta el color del texto según sea necesario */
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 8px;
+    margin: 10px;
+    
+    transition: transform 0.3s;
+  }
+  
+  #carrera-galgos:hover {
+    transform: scale(1.05);
+  }
+  
+  #carrera-galgos h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  #carrera-galgos p {
+    color: #1f53c5;
+  }
+  MODALES/
+.modal {
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 35%;
+    padding: 40px;
+    background-color: #ffffffd0;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    
+}
+
+.botonesModal {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+  
+.botonModal {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #0DA643;
+    color: #0DA643;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.botonModal:hover {
+    background-color: #0DA643;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+  
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+  
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+}
